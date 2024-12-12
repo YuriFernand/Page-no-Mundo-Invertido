@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #111;
+    overflow: hidden;
+}
+
+#background {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-image: url('background.jpg'); /* Substitua pela imagem que deseja usar */
+    background-size: cover;
+    background-position: center;
+    filter: brightness(50%) contrast(150%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#content {
+    text-align: center;
+    color: #fff;
+    transform: rotate(180deg); /* Inverte o conteúdo */
+    animation: float 3s ease-in-out infinite;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.6);
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    background-color: #e60000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+    transform: rotate(180deg); /* Inverte o botão */
+}
+
+button:hover {
+    background-color: #ff4d4d;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
